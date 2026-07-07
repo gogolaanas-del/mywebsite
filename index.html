@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Website</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 80px;
+            background: #eeeeee;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>مرحبا بك فالموقع ديالي</h1>
+
+    <h2>تسجيل الدخول</h2>
+
+    <input id="username" type="text" placeholder="اسم المستخدم">
+    <br>
+
+    <input id="password" type="password" placeholder="كلمة السر">
+    <br>
+
+    <button onclick="login()">دخول</button>
+
+    <p id="message"></p>
+
+
+    <script>
+
+        function login(){
+
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if(user === "admin" && pass === "1234"){
+                document.getElementById("message").innerHTML = "دخلتي بنجاح 🎉";
+            }
+            else{
+                document.getElementById("message").innerHTML = "اسم المستخدم أو كلمة السر غلط ❌";
+            }
+
+        }
+
+    </script>
+
+
+</body>
+</html>
